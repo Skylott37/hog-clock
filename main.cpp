@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <ctime>
 #include <chrono>
@@ -18,7 +19,7 @@ void printAsciiTime(int digit) {
             std::cout << "███ ";
             break;
         case 1:
-            std::cout << "█   ";
+            std::cout << "█  ";
             break;
         case 2:
             std::cout << "███ ";
@@ -27,7 +28,7 @@ void printAsciiTime(int digit) {
             std::cout << "███ ";
             break;
         case 4:
-            std::cout << "█ █ ";
+            std::cout << "  █ ";
             break;
         case 5:
             std::cout << "███ ";
