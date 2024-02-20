@@ -15,34 +15,34 @@
 void printAsciiTime(int digit) {
     switch (digit) {
         case 0:
-            std::cout << "███\n█ █\n█ █\n█ █\n███\n";
+            std::cout << "███ ";
             break;
         case 1:
-            std::cout << "  █\n  █\n  █\n  █\n  █\n";
+            std::cout << "█   ";
             break;
         case 2:
-            std::cout << "███\n  █\n███\n█  \n███\n";
+            std::cout << "███ ";
             break;
         case 3:
-            std::cout << "███\n  █\n███\n  █\n███\n";
+            std::cout << "███ ";
             break;
         case 4:
-            std::cout << "█ █\n█ █\n███\n  █\n  █\n";
+            std::cout << "█ █ ";
             break;
         case 5:
-            std::cout << "███\n█  \n███\n  █\n███\n";
+            std::cout << "███ ";
             break;
         case 6:
-            std::cout << "███\n█  \n███\n█ █\n███\n";
+            std::cout << "███ ";
             break;
         case 7:
-            std::cout << "███\n  █\n  █\n  █\n  █\n";
+            std::cout << "███ ";
             break;
         case 8:
-            std::cout << "███\n█ █\n███\n█ █\n███\n";
+            std::cout << "███ ";
             break;
         case 9:
-            std::cout << "███\n█ █\n███\n  █\n███\n";
+            std::cout << "███ ";
             break;
     }
 }
