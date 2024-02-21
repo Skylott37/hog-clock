@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <ctime>
 #include <chrono>
@@ -13,13 +12,13 @@
 #define ANSI_COLOR_CYAN    "\x1b[36m"
 #define ANSI_COLOR_RESET   "\x1b[0m"
 
-void printAsciiTime(int digit) {
+void printAsciiTimeHorizontal(int digit) {
     switch (digit) {
         case 0:
             std::cout << "███ ";
             break;
         case 1:
-            std::cout << "█  ";
+            std::cout << "█   █ ";
             break;
         case 2:
             std::cout << "███ ";
@@ -28,7 +27,7 @@ void printAsciiTime(int digit) {
             std::cout << "███ ";
             break;
         case 4:
-            std::cout << "  █ ";
+            std::cout << "  █  █ ";
             break;
         case 5:
             std::cout << "███ ";
@@ -60,27 +59,27 @@ int main() {
 
         // Print time with colored background
         std::cout << ANSI_COLOR_RED;
-        printAsciiTime(local_time->tm_hour / 10);
+        printAsciiTimeHorizontal(local_time->tm_hour / 10);
         std::cout << ANSI_COLOR_RESET;
 
         std::cout << ANSI_COLOR_GREEN;
-        printAsciiTime(local_time->tm_hour % 10);
+        printAsciiTimeHorizontal(local_time->tm_hour % 10);
         std::cout << ANSI_COLOR_RESET;
 
         std::cout << ANSI_COLOR_YELLOW;
-        printAsciiTime(local_time->tm_min / 10);
+        printAsciiTimeHorizontal(local_time->tm_min / 10);
         std::cout << ANSI_COLOR_RESET;
 
         std::cout << ANSI_COLOR_BLUE;
-        printAsciiTime(local_time->tm_min % 10);
+        printAsciiTimeHorizontal(local_time->tm_min % 10);
         std::cout << ANSI_COLOR_RESET;
 
         std::cout << ANSI_COLOR_MAGENTA;
-        printAsciiTime(local_time->tm_sec / 10);
+        printAsciiTimeHorizontal(local_time->tm_sec / 10);
         std::cout << ANSI_COLOR_RESET;
 
         std::cout << ANSI_COLOR_CYAN;
-        printAsciiTime(local_time->tm_sec % 10);
+        printAsciiTimeHorizontal(local_time->tm_sec % 10);
         std::cout << ANSI_COLOR_RESET;
 
         // Wait for a second before updating the time
@@ -89,3 +88,4 @@ int main() {
 
     return 0;
 }
+
